@@ -2,7 +2,7 @@
 
 ![Project Image](https://ik.imagekit.io/p4ukigs1hrvx/readme_tGQuZPKZI.PNG)
 
-> This is a ReadMe template to help save you time and effort.
+> cool ha
 
 ---
 
@@ -36,16 +36,10 @@ this is web personal web site and some project that i did on my self
 ## How To Use
 
 #### Installation
-
-
-
-#### API Reference
-
-```html
-    <p>dummy code</p>
+```shell
+    npm install
+    npm run start
 ```
-[Back To The Top](#read-me-template)
-
 ---
 
 
