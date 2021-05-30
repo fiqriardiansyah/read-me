@@ -1,0 +1,130 @@
+nav{
+    height: 5rem;
+    width: 100vw;
+    position: fixed;
+    top: -5rem;
+    left: 0;
+    padding: 1rem 2rem;
+    z-index: 100;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+
+    display: flex;
+    justify-content: space-between;
+
+    #logo{
+        height: 100%;
+        cursor: pointer;
+    }
+
+    .action{
+
+        display: flex;
+
+        &>*:not(:last-child){
+            margin-right: 3rem;
+        }
+
+        &_color{
+
+            display: flex;
+
+            &>*{
+                width: 3rem;
+                height: 3rem;
+                border-radius: 1rem;
+                box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+                cursor: pointer;
+                transition: all .3s;
+
+                &:hover{
+                    box-shadow: 4px 4px 10px rgba(0,0,0,0.5);
+                    transform: translateY(-.5px);
+                }
+
+                &:not(:last-child){
+                    margin-right: 1rem;
+                }
+            }
+
+            &_1{
+                background-color: #1E142A;
+            }
+            &_2{
+                background-color: #BA336D;
+            }
+            &_3{
+                background-color: #F4DB5F;
+            }
+            &_4{
+                background-color: #33DCCC;
+            }
+            &_5{
+                background-color: #9DB0B2;
+            }
+        }
+
+        &_button{
+
+            width: 3rem;
+            height: 3rem;
+            
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: space-between;
+            cursor: pointer;
+            
+            position: relative;
+            z-index: 90;
+
+            &>*{
+                background-color: white;
+                height: .8rem;
+                box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+                transition: all .2s;
+            }
+
+            &_1{
+                width: 100%;
+            }
+            &_2{
+                width: 75%;
+            }
+            &_3{
+                width: 50%;
+            }
+
+
+            &:hover {
+                &>*{
+                    width: 100%;
+                }
+            }
+            
+
+            &:focus{
+                outline: none;
+            }
+
+            
+        }
+    }
+}
+
+.active{
+    
+    &>*{
+        width: 100% !important;
+        box-shadow: none !important;
+    }
+
+    &>div:nth-child(1){
+        transform: translateY(10px) rotate(45deg) !important;
+    }
+    &>div:nth-child(2){
+        opacity: 0;
+    }
+    &>div:nth-child(3){
+        transform: translateY(-11px) rotate(-45deg) !important;
+    }
+}

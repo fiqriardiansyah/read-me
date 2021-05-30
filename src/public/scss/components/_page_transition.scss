@@ -1,0 +1,31 @@
+.transition{
+
+    width: 100vw;
+    height: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 400;
+
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+
+    &>*{
+        background-color: rgb(255, 238, 238);
+        height: 0;
+        display: flex;
+        align-self: end;
+    }
+
+    &>*:not(:last-child){
+        border-right: 1px solid black;
+    }
+    
+}
+
+@media only screen and (max-width: 800px){
+    .transition{
+        grid-template-columns: repeat(3,1fr) !important;
+    }
+}

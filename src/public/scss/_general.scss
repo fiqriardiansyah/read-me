@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Poppins', sans-serif;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box;
+    transition: all .3s;
+    overflow: hidden;
+    // cursor: none;
+}
+
+@font-face {
+    font-family: 'BestFriends';
+    src: url('../assets/fonts/BestFriends-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'JamesStroker';
+    src: url('../assets/fonts/JamesStroker.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Angelina';
+    src: url('../assets/fonts/angelina.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Fofer';
+    src: url('../assets/fonts/Fofer.otf') format('opentype');
+}
+
+
+::-webkit-scrollbar {
+    display:none;
+}
+
+//cursor
+
+@media only screen and (max-width: 800px){
+    .cursor{
+        display: none !important;
+    }
+    html{
+        scroll-behavior: smooth;
+        font-size: 40%;
+    }
+}
+
+
+
+.cursor-active{
+    width: 4rem;
+	height: 4rem;
+	border: 2px solid black;
+	border-radius: 50%;
+	position: fixed;
+	transform: translate(-50%,-50%);
+	pointer-events: none;
+	transition: all .3s ease;
+	transition-property: background,transform,width,height,opacity;
+	transform-origin: 100% 100%;
+	z-index: 1000;
+    top: 50%;
+    left: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cursor-active div{
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    backdrop-filter: invert(100%);
+}
+
+.bigger-cursor{
+    width: 8rem;
+    height: 8rem;
+}
+.rect-cursor{
+    border-radius: 0;
+}
+.cursor_click{
+    width: 8rem;
+    height: 8rem;
+    opacity: 0;
+    background: white;
+}
+

@@ -1,0 +1,80 @@
+.grid_container{
+
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: black;
+    z-index: 100;
+    transition: all 1s ease-in;
+
+    .grid_parent{
+        height: 100vh;
+        display: grid;
+        grid-template-columns: repeat(8,1fr);
+    }
+
+    .name{
+        color: white;
+        position: fixed;
+        transform: translate(-50%,-50%);
+        top: 50%;
+        left: 50%;
+        font-size: 10rem;
+        font-family: 'JamesStroker';
+        transition: all 1s cubic-bezier(.19,-0.2,.26,1.3);
+        transition-property: opacity;
+        text-align: end;
+    }
+
+    
+}
+
+.animate_opening-custome{
+    background-color: transparent !important;
+    pointer-events: none !important;
+    z-index: 1 !important;
+}
+
+.grid_gradient{
+    &>*:not(:last-child){
+        border-right: 1px solid rgba(128, 128, 128, 0.315);
+    }
+}
+.name_black{
+    color: black !important;
+}
+.name_opacity_0{
+    opacity: 0 !important;
+}
+.name_opacity_1{
+    opacity: 1 !important;
+}
+
+
+@media only screen and (max-width: 800px){
+    .grid_parent{
+        grid-template-columns: repeat(3,1fr) !important;
+    }
+    .grid_gradient{
+        &>*:not(:last-child){
+            border-right: 3px solid rgba(128, 128, 128, 0.315);
+        }
+    }
+    .name{
+        font-size: 7rem !important;
+        text-align: center !important;
+        animation: 1s aniname 4s forwards !important;
+    }
+
+}
+
+@keyframes aniname{
+    0%{
+        font-size: 7rem;
+    }
+    100%{
+        font-size: 2rem !important;
+    }
+}

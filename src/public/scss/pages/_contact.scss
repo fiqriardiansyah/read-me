@@ -1,0 +1,199 @@
+//content.js
+
+#backdrop{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0;
+    z-index: 100;
+    pointer-events: none;
+    transition: all .3s;
+}
+
+.backdrop-animate{
+    opacity: .4 !important;
+}
+
+.contact-container{
+
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .grid-contact{
+        width: 100vw;
+        height: 100vh;
+        
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+
+        .grid-link{
+            text-decoration: none;
+            display: block;
+        }
+
+        .grid-box{
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+            transition: background-color .5s 1s;
+            cursor: pointer;
+
+            .grid-border{
+                width: 85% !important;
+                height: 85% !important;
+                position: absolute !important;
+                border-radius: 1rem !important;
+                opacity: 0;
+                transition: opacity .5s;
+                z-index: 1;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                pointer-events: none;
+                z-index: 200;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+
+            .grid-logo{
+                width: 7rem;
+                transition: width .5s;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                pointer-events: none;
+                z-index: 300;
+
+
+                svg{
+                    transition: stroke .5s;
+                    fill: none;
+                    stroke-width: 6px;
+                    stroke: rgb(92, 92, 92);
+                    pointer-events: none;
+                }
+            }
+
+            .grid-name{
+                opacity: 0;
+                font-family: 'JamesStroker';
+                font-size: 3rem;
+                color: white;
+                transition: opacity font-size color .5s;
+                position: absolute;
+                top: 80%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                pointer-events: none;
+                z-index: 300;
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 1000px){
+    .grid-contact{
+        grid-template-columns: repeat(2,1fr) !important;
+    }
+}
+@media only screen and (max-width: 600px){
+    .grid-contact{
+        grid-template-columns: 1fr !important;
+    }
+}
+
+.grid-box-animate{
+
+    background-color: rgba(255,255,255,0.5) !important;
+
+    .grid-border{
+        opacity: 1 !important;
+    }
+
+    .grid-logo{
+        width: 14rem !important;
+
+        svg{
+            stroke: rgb(92, 92, 92);
+        }
+    }
+
+    .grid-name{
+        opacity: 1 !important;
+        font-size: 4rem !important;
+    }
+}
+
+.instagram-color-border{
+    border: .5rem solid #DD2A7B !important;
+}
+.email-color-border{
+    border: .5rem solid #d4362a !important;
+}
+.whatsapp-color-border{
+    border: .5rem solid #29d92f !important;
+}
+.linkedin-color-border{
+    border: .5rem solid  #1969d1 !important;
+}
+
+
+.instagram-color{
+    stroke: #DD2A7B !important;
+}
+.email-color{
+    stroke: #d4362a !important;
+}
+.whatsapp-color{
+    stroke: #29d92f !important;
+}
+.linkedin-color{
+    stroke: #1969d1 !important;
+}
+
+.instagram{
+    color: #DD2A7B !important;
+}
+.email{
+    color: #d4362a !important;
+}
+.whatsapp{
+    color: #29d92f !important;
+}
+.linkedin{
+    color: #1969d1 !important;
+}
+
+
+.grid-box-restart{
+
+    .grid-border{
+        transition: all .5s !important;
+        top: 50% !important;
+        left: 50% !important;
+    }
+    .grid-logo{
+        transition: all .5s !important;
+        top: 50% !important;
+        left: 50% !important;
+    }
+    .grid-name{
+        transition: all .5s !important;
+        top: 80% !important;
+        left: 50% !important;
+    }
+}
+

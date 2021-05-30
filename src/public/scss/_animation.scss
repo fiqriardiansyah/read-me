@@ -1,0 +1,16 @@
+@keyframes icon_close{
+    0%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    20%{
+        transform: scale(0.9);
+        transform: rotateX(45deg);
+    }
+    100%{
+        transform: translateY(-100%);
+        
+        opacity: 0;
+    }
+}
+
