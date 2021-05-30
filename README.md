@@ -1,6 +1,6 @@
 # Readme personal web
 
-![Project Image](https://fiqriardiansyah-dev.web.app)
+![Project Image](https://ik.imagekit.io/p4ukigs1hrvx/readme_tGQuZPKZI.PNG)
 
 > This is a ReadMe template to help save you time and effort.
 
